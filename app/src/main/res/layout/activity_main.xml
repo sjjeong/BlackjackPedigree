@@ -5,11 +5,11 @@
 
     <data>
 
-        <import type="com.dino.blackjackpedigree.model.enums.PlayerActionCategory" />
+        <import type="com.dino.blackjacktraining.model.enums.PlayerActionCategory" />
 
         <variable
             name="vm"
-            type="com.dino.blackjackpedigree.ui.MainViewModel" />
+            type="com.dino.blackjacktraining.ui.MainViewModel" />
 
     </data>
 

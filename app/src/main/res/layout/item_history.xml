@@ -5,7 +5,7 @@
 
         <variable
             name="item"
-            type="com.dino.blackjackpedigree.model.enums.TableCategory" />
+            type="com.dino.blackjacktraining.model.enums.TableCategory" />
 
     </data>
 

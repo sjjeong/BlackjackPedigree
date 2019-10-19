@@ -1,9 +1,9 @@
-package com.dino.blackjackpedigree.ui
+package com.dino.blackjacktraining.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.dino.blackjackpedigree.model.enums.PlayerActionCategory
-import com.dino.blackjackpedigree.model.enums.TableCategory
+import com.dino.blackjacktraining.model.enums.PlayerActionCategory
+import com.dino.blackjacktraining.model.enums.TableCategory
 import com.dino.library.ui.DinoViewModel
 
 class MainViewModel : DinoViewModel() {

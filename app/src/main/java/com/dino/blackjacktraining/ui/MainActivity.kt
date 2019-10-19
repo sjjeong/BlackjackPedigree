@@ -1,7 +1,7 @@
-package com.dino.blackjackpedigree.ui
+package com.dino.blackjacktraining.ui
 
-import com.dino.blackjackpedigree.R
-import com.dino.blackjackpedigree.databinding.ActivityMainBinding
+import com.dino.blackjacktraining.R
+import com.dino.blackjacktraining.databinding.ActivityMainBinding
 import com.dino.library.ui.DinoActivity
 
 class MainActivity : DinoActivity<ActivityMainBinding, MainViewModel>(

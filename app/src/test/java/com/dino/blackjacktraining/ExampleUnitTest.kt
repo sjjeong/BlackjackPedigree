@@ -1,4 +1,4 @@
-package com.dino.blackjackpedigree
+package com.dino.blackjacktraining
 
 import org.junit.Test
 

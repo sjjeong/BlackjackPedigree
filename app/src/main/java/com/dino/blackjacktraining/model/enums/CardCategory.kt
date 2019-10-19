@@ -1,4 +1,4 @@
-package com.dino.blackjackpedigree.model.enums
+package com.dino.blackjacktraining.model.enums
 
 enum class CardCategory(val number: Int) {
     C_2(2),

@@ -1,7 +1,7 @@
-package com.dino.blackjackpedigree
+package com.dino.blackjacktraining
 
 import android.app.Application
-import com.dino.blackjackpedigree.di.vieWModelModule
+import com.dino.blackjacktraining.di.vieWModelModule
 import com.dino.library.ext.setupKoin
 
 class DinoApplication : Application() {

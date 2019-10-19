@@ -1,4 +1,4 @@
-package com.dino.blackjackpedigree.model.enums
+package com.dino.blackjacktraining.model.enums
 
 enum class PlayerActionCategory(val content: String) {
     HIT("HIT"),

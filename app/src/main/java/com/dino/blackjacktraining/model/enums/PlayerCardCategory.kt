@@ -1,4 +1,4 @@
-package com.dino.blackjackpedigree.model.enums
+package com.dino.blackjacktraining.model.enums
 
 import kotlin.math.min
 import kotlin.random.Random
