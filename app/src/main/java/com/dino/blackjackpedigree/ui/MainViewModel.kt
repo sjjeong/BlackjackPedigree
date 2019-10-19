@@ -14,6 +14,9 @@ class MainViewModel : DinoViewModel() {
     private val _livePlayerCards = MutableLiveData<Pair<String, String>>()
     val livePlayerCards: LiveData<Pair<String, String>> = _livePlayerCards
 
+    private val _liveHistoryItems = MutableLiveData<List<TableCategory>>(mutableListOf())
+    val liveHistoryItems: LiveData<List<TableCategory>> = _liveHistoryItems
+
     init {
         startGame()
     }
@@ -25,9 +28,12 @@ class MainViewModel : DinoViewModel() {
     }
 
     fun submitAnswer(actionCategory: PlayerActionCategory) {
-        val rightAction = liveAnswer.value?.action ?: return
+        val rightAnswer = liveAnswer.value ?: return
+        val rightAction = rightAnswer.action
         if (rightAction == actionCategory) {
             showToast("정답입니다.")
+            _liveHistoryItems.value =
+                _liveHistoryItems.value?.toMutableList()?.apply { add(0, rightAnswer) }
             startGame()
         } else {
             showToast("오답입니다.")

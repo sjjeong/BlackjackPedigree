@@ -1,5 +1,6 @@
 package com.dino.blackjackpedigree.model.enums
 
+import kotlin.math.min
 import kotlin.random.Random
 
 enum class PlayerCardCategory(
@@ -81,7 +82,7 @@ enum class PlayerCardCategory(
 
     private fun getNumberValue(number: Int): Pair<String, String> {
         val halfNumber = number / 2 + 1
-        val firstNumber = Random.Default.nextInt(halfNumber, number)
+        val firstNumber = Random.Default.nextInt(halfNumber, min(number, 10))
         val secondNumber = number - firstNumber
         return "$firstNumber" to "$secondNumber"
     }

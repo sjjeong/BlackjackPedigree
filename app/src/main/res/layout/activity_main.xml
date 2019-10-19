@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -23,6 +24,7 @@
             android:layout_width="@dimen/card_width"
             android:layout_height="@dimen/card_height"
             android:layout_gravity="center_horizontal"
+            android:autoSizeTextType="uniform"
             android:background="@drawable/bg_white_stroke_gray5"
             android:gravity="center"
             android:text="@{vm.liveAnswer.dealer.content}"
@@ -40,6 +42,7 @@
                 android:layout_width="@dimen/card_width"
                 android:layout_height="@dimen/card_height"
                 android:layout_gravity="center_horizontal"
+                android:autoSizeTextType="uniform"
                 android:background="@drawable/bg_white_stroke_gray5"
                 android:gravity="center"
                 android:text="@{vm.livePlayerCards.first}"
@@ -51,6 +54,7 @@
                 android:layout_height="@dimen/card_height"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="8dp"
+                android:autoSizeTextType="uniform"
                 android:background="@drawable/bg_white_stroke_gray5"
                 android:gravity="center"
                 android:text="@{vm.livePlayerCards.second}"
@@ -59,17 +63,21 @@
 
         </LinearLayout>
 
-        <View
-            android:layout_width="wrap_content"
+        <androidx.recyclerview.widget.RecyclerView
+            itemLayout="@{@layout/item_history}"
+            items="@{vm.liveHistoryItems}"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_history" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:layout_marginTop="32dp">
 
             <TextView
                 android:layout_width="0dp"
@@ -96,6 +104,15 @@
                 android:text="@{PlayerActionCategory.STAY.name}"
                 android:textSize="16sp"
                 tools:text="STAY" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="0dp"
