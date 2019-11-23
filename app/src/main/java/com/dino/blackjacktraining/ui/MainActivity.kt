@@ -1,5 +1,7 @@
 package com.dino.blackjacktraining.ui
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import com.dino.blackjacktraining.BuildConfig
 import com.dino.blackjacktraining.R
@@ -20,4 +22,13 @@ class MainActivity : DinoActivity<ActivityMainBinding, MainViewModel>(
             }
         }
     }
+
+    companion object {
+
+        fun start(context: Context?) {
+            context?.startActivity(Intent(context, MainActivity::class.java))
+        }
+
+    }
+
 }

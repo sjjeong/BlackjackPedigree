@@ -2,5 +2,6 @@
     <string name="app_name">BlackjackTraining</string>
     <string name="ad_app_key" translatable="false">ca-app-pub-3455486566753347~2727743102</string>
     <string name="ad_banner_main_bottom_key" translatable="false">ca-app-pub-3455486566753347/7633064356</string>
+    <string name="ad_interstitial_start_key" translatable="false">ca-app-pub-3455486566753347/8718436382</string>
 
 </resources>
