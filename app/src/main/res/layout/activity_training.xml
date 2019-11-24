@@ -9,7 +9,7 @@
 
         <variable
             name="vm"
-            type="com.dino.blackjacktraining.ui.MainViewModel" />
+            type="com.dino.blackjacktraining.ui.training.TrainingViewModel" />
 
     </data>
 
@@ -20,7 +20,7 @@
         android:paddingStart="16dp"
         android:paddingTop="16dp"
         android:paddingEnd="16dp"
-        tools:context=".ui.MainActivity">
+        tools:context=".ui.training.TrainingActivity">
 
         <TextView
             android:layout_width="@dimen/card_width"

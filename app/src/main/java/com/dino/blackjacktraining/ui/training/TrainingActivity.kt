@@ -1,17 +1,17 @@
-package com.dino.blackjacktraining.ui
+package com.dino.blackjacktraining.ui.training
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.dino.blackjacktraining.BuildConfig
 import com.dino.blackjacktraining.R
-import com.dino.blackjacktraining.databinding.ActivityMainBinding
+import com.dino.blackjacktraining.databinding.ActivityTrainingBinding
 import com.dino.library.ui.DinoActivity
 import com.google.android.gms.ads.AdRequest
+import com.googry.dinolibrary.BuildConfig
 
-class MainActivity : DinoActivity<ActivityMainBinding, MainViewModel>(
-    R.layout.activity_main,
-    MainViewModel::class.java
+class TrainingActivity : DinoActivity<ActivityTrainingBinding, TrainingViewModel>(
+    R.layout.activity_training,
+    TrainingViewModel::class.java
 ) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +26,7 @@ class MainActivity : DinoActivity<ActivityMainBinding, MainViewModel>(
     companion object {
 
         fun start(context: Context?) {
-            context?.startActivity(Intent(context, MainActivity::class.java))
+            context?.startActivity(Intent(context, TrainingActivity::class.java))
         }
 
     }

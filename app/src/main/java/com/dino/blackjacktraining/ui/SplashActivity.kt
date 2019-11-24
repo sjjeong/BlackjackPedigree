@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.dino.blackjacktraining.BuildConfig
 import com.dino.blackjacktraining.R
+import com.dino.blackjacktraining.ui.training.TrainingActivity
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
@@ -49,7 +50,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun startMainActivity() {
-        MainActivity.start(this@SplashActivity)
+        TrainingActivity.start(this@SplashActivity)
         finish()
     }
 }
